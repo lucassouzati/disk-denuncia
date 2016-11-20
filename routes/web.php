@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return redirect()->route('entrevistados.create');
 });
 
 Auth::routes();
@@ -20,4 +21,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('perguntas', 'PerguntasController');
-Route::resource('perguntas', 'PerguntasController');
+Route::resource('entrevistados', 'EntrevistadosController');

@@ -27,5 +27,8 @@ class Pergunta extends Model
      */
     protected $fillable = ['descricao', 'dimensao', 'status'];
 
-    
+    public function scopeDaDimensao($query, $dimensao)
+    {
+        return $query->where('dimensao', $dimensao);
+    }
 }

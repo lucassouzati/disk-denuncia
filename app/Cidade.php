@@ -15,4 +15,14 @@ class Cidade extends Model
     {
         return $this->hasMany('App\Entrevistado');
     }
+
+    /**
+     * Scope a query to only include active users.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeDoEstado($query, $estado_id)
+    {
+        return $query->where('estado_id', $estado_id);
+    }
 }

@@ -50,7 +50,10 @@ class PerguntasController extends Controller
         
         Pergunta::create($requestData);
 
-        Session::flash('flash_message', 'Pergunta added!');
+        \Session::flash('flash_message',[
+            'msg'=>"Pergunta cadastrada com sucesso!",
+            'class'=>"alert-success"
+        ]);
 
         return redirect('perguntas');
     }
@@ -102,7 +105,10 @@ class PerguntasController extends Controller
         $pergunta = Pergunta::findOrFail($id);
         $pergunta->update($requestData);
 
-        Session::flash('flash_message', 'Pergunta updated!');
+        \Session::flash('flash_message',[
+            'msg'=>"Pergunta atualizada com sucesso!",
+            'class'=>"alert-success"
+        ]);
 
         return redirect('perguntas');
     }
@@ -118,7 +124,10 @@ class PerguntasController extends Controller
     {
         Pergunta::destroy($id);
 
-        Session::flash('flash_message', 'Pergunta deleted!');
+        \Session::flash('flash_message',[
+            'msg'=>"Pergunta deletada com sucesso!",
+            'class'=>"alert-success"
+        ]);
 
         return redirect('perguntas');
     }

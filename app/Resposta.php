@@ -15,10 +15,10 @@ class Resposta extends Model
         'valor', 'resposta_texto', 'pergunta_id', 'entrevistado_id', 'data_hora'
     ];
 
-    public pergunta(){
+    public function pergunta(){
     	return belongsTo('App\Pergunta');
     }
-    public entrevistado(){
+    public function entrevistado(){
     	return belongsTo('App\Entrevistado');
     }
 }

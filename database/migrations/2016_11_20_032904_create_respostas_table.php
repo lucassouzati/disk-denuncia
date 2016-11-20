@@ -17,8 +17,8 @@ class CreateRespostasTable extends Migration
             $table->increments('id');
             $table->integer('valor')->nullable();
             $table->string('resposta_texto')->nullable();
-            $table->integer('pergunta_id'));
-            $table->integer('entrevistado_id'));
+            $table->integer('pergunta_id');
+            $table->integer('entrevistado_id');
             $table->dateTime('data_hora');
             $table->timestamps();
         });

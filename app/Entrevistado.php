@@ -15,7 +15,7 @@ class Entrevistado extends Model
         'faixa_etaria', 'sexo', 'renda_familiar', 'cidade_id', 'conhece_disk_denuncia'
     ];
 
-    public cidade(){
+    public function cidade(){
     	return belongsTo('App\Cidade');
     }
 }
