@@ -8,14 +8,14 @@
 <div class="form-group {{ $errors->has('dimensao') ? 'has-error' : ''}}">
     {!! Form::label('dimensao', 'Dimensao', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::select('dimensao', ['1', '2', '3', '4', '5'], null, ['class' => 'form-control', 'required' => 'required']) !!}
+        {!! Form::select('dimensao', ['1' => '1', '2', '3', '4', '5'], null, ['class' => 'form-control', 'required' => 'required']) !!}
         {!! $errors->first('dimensao', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
 <div class="form-group {{ $errors->has('status') ? 'has-error' : ''}}">
     {!! Form::label('status', 'Status', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::select('status', ['Ativo', 'Inativo'], null, ['class' => 'form-control']) !!}
+        {!! Form::select('status', ['Ativo' => 'Ativo', 'Inativo' => 'Inativo'], null, ['class' => 'form-control']) !!}
         {!! $errors->first('status', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
