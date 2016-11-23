@@ -32,6 +32,7 @@ class CreateEntrevistadosTable extends Migration
                                   'Indígena'])->nullable();
             $table->integer('cidade_id')->nullable();
             $table->boolean('conhece_disk_denuncia')->nullable();
+            $table->text('consideracao')->nullable();
             $table->timestamps();
         });
     }

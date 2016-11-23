@@ -42,15 +42,15 @@ class EntrevistadosController extends Controller
         $dados = $request->all();
 
         $entrevistado = Entrevistado::create($dados);
-
+        if (!empty($dados['pergunta'])){
         foreach ($dados['pergunta'] as $pergunta => $resposta) {
             $resposta = Resposta::create(['valor' => $resposta,
 //                                    'resposta_texto' => '',
                                     'pergunta_id' => $pergunta,
                                     'entrevistado_id' => $entrevistado->id,
-                                    'data_hora' => Carbon::now()]);    
+                                    'data_hora' => Carbon::now()]);
         }
-
+      }
         \Session::flash('flash_message',[
             'msg'=>"Resposta cadastrada com sucesso!",
             'class'=>"alert-success"
