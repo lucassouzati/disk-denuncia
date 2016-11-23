@@ -8,13 +8,22 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'DiskDenuncia') }}</title>
 
     <!-- Styles -->
     <!-- <link href="/css/app.css" rel="stylesheet"> -->
     <!-- Bootstrap 3.3.7 -->
     <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
+    <style media="screen">
+    .navbar-default {
+        background-color: #fff;
+        background-repeat: no-repeat;
 
+    }
+    .navbar-default .navbar-brand {
+      color: #ef4724;
+    }
+    </style>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -38,7 +47,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ HTML::image('/imagens/IFF.jpg', 'alt', array( 'width' => 200, 'height' => 35 )) }}
                     </a>
                 </div>
 

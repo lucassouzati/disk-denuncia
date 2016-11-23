@@ -12,7 +12,7 @@ class Entrevistado extends Model
      * @var array
      */
     protected $fillable = [
-        'faixa_etaria', 'sexo', 'renda_familiar', 'cidade_id', 'conhece_disk_denuncia'
+        'faixa_etaria', 'sexo', 'renda_familiar', 'raca' ,'cidade_id', 'conhece_disk_denuncia'
     ];
 
     public function cidade(){

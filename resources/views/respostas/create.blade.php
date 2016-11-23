@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
 <form class="form-horizontal" role="form" method="POST" action="{{ route('entrevistados.store') }}">
     <div class="row">
@@ -14,12 +15,12 @@
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Faixa Etária</label>
                             <div class="col-md-6">
-                                
+
                                 {!! Form::select('faixa_etaria', ['Não Informada' => '',
-                                                                'De 10 a 20 anos' =>'De 10 a 20 anos', 
-                                                                'De 21 a 30 anos' => 'De 21 a 30 anos', 
+                                                                'De 10 a 20 anos' =>'De 10 a 20 anos',
+                                                                'De 21 a 30 anos' => 'De 21 a 30 anos',
                                                                 'De 31 a 40 anos' => 'De 31 a 40 anos',
-                                                                'De 41 a 50 anos' => 'De 41 a 50 anos', 
+                                                                'De 41 a 50 anos' => 'De 41 a 50 anos',
                                                                 'De 51 a 60 anos' => 'De 51 a 60 anos',
                                                                 'Mais de 60 anos' => 'Mais de 60 anos'], null, ['class' => 'form-control',]) !!}
 
@@ -58,10 +59,27 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('raca') ? ' has-error' : '' }}">
+                            <label for="name" class="col-md-4 control-label">Raça</label>
+                            <div class="col-md-6">
+                              {!! Form::select('raca', ['Não Informada' => '',
+                                                      'Branca' =>'Branca',
+                                                      'Preta' => 'Preta',
+                                                      'Amarela' => 'Amarela',
+                                                      'Parda' => 'Parda',
+                                                      'Indígena' => 'Indígena'], null, ['class' => 'form-control',]) !!}
+                                @if ($errors->has('raca'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('raca') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('cidade_id') ? ' has-error' : '' }}">
                             <label for="cidade_id" class="col-md-4 control-label">Cidade que reside</label>
                             <div class="col-md-6">
-                                
+
                                 {!! Form::select('cidade_id', \App\Cidade::doEstado(19)->pluck('nome', 'id'), 6775, ['class' => 'form-control',]) !!}
 
                                 @if ($errors->has('cidade_id'))
@@ -86,8 +104,8 @@
                             </div>
                         </div>
 
-                        
-                    
+
+
                 </div>
             </div>
         </div>
@@ -100,15 +118,15 @@
                     @forelse(\App\Pergunta::daDimensao(1)->get() as $pergunta)
                         <div class="col-md-12">
                             <div class="col-md-6 col-md-offset-4">
-                                <label for="conhece_disk_denuncia" class="col-md-4 control-label">{{$pergunta->descricao}}</label>    
+                                <label for="conhece_disk_denuncia" class="col-md-4 control-label">{{$pergunta->descricao}}</label>
                             </div>
-                            
+
                             <div class="col-md-6 col-md-offset-4">
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1 
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2 
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3 
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4 
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5 
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5
                                 {!! Form::radio('pergunta['.$pergunta->id.']', '0', false, ['class', 'form-control']); !!}Não sei responder
                             </div>
                         </div>
