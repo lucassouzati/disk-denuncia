@@ -9,11 +9,20 @@
     border-radius: 25px;
     border: 2px solid #73AD21;
     padding: 10px;
-    margin-bottom: 3px; 
+    margin-bottom: 3px;
+   }
+   .imagens > img{
+     height: 150px;
+     width: 100%;
+   }
+   .div-imagens{
+     float: left;
+     width: 25%;
+
    }
 </style>
 <div class="container">
-<form class="form-horizontal" role="form" method="POST" action="{{ route('entrevistados.store') }}">
+  <form class="form-horizontal" role="form" method="POST" action="{{ route('entrevistados.store') }}">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -304,4 +313,23 @@
     </div>
     </form>
 </div>
+<footer>
+<div class="container">
+
+
+      <div class="div-imagens imagens">
+        {{ HTML::image('/imagens/logoAC.jpg', 'alt') }}
+      </div>
+      <div class="div-imagens imagens">
+        {{ HTML::image('/imagens/IFF.jpg', 'alt') }}
+      </div>
+      <div class="div-imagens imagens">
+        {{ HTML::image('/imagens/logoAminature.jpg', 'alt') }}
+      </div>
+      <div class="div-imagens imagens">
+        {{ HTML::image('/imagens/logonovoddn.jpg', 'alt') }}
+      </div>
+
+</div>
+</footer>
 @endsection
