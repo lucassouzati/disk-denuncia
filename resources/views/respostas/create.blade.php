@@ -146,6 +146,13 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Dimensões</h2>
+            <p>Informe uma nota de 1 a 5. Na escala, quanto menor o número atribuído, menor é sua satisfação em relação ao item que está sendo avaliado. Caso, não saiba responder, marque o item "Não sei responder".</p>
+        </div>
+    </div>
+    
     @if(count(App\Pergunta::daDimensao(1)->get()))
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -335,6 +342,25 @@
     </div>
 </div>
 <footer>
+<div class="col-md-12">
+    <h5>Organização:</h5>
+    <div>
+        <div class="col-md-4 col-sm-12">
+            <img class="img-responsive" src="/imagens/logoAminature.jpg" alt="alt">
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <img class="img-responsive" src="/imagens/logonovoddn.jpg" alt="alt">
+        </div>
+    </div>
+    
+    <div>
+        <h5>Apoio:</h5>
+        <div class="col-md-4 col-sm-12">
+            <img class="img-responsive" src="/imagens/IFF.jpg" alt="alt">
+        </div>
+    </div>
+</div>
+<!--
 <div class="container">
 
 
@@ -352,5 +378,6 @@
       </div>
 
 </div>
+-->
 </footer>
 @endsection
