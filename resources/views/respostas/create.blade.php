@@ -20,9 +20,23 @@
      width: 25%;
 
    }
+   .jumbotron {
+    position: relative;
+    background: rgba(236,238,239, 0.6) url("/imagens/logoAC-tp.png") no-repeat center center;
+    width: 100%;
+    height: 100%;
+    background-size: 240px 180px;
+    overflow: hidden;
+    }   
+
 </style>
 <div class="container">
-  <form class="form-horizontal" role="form" method="POST" action="{{ route('entrevistados.store') }}">
+    <div class="jumbotron">
+        <h2>Avaliação dos Serviços de Segurança Pública na Percepção da Comunidade</h2>
+        <p>Este formulário tem o objetivo de dialogar com a comunidade sobre segurança pública. Suas respostas são de grande importância para nos ajudar a ofertar serviços melhores à população. Ajudem-nos!</p>
+    </div>
+<div class="row">
+    <form class="form-horizontal" role="form" method="POST" action="{{ route('entrevistados.store') }}">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -57,7 +71,7 @@
                             <div class="col-md-6">
                                 {!! Form::radio('sexo', 'Masculino', false, ['class', 'form-control']); !!}Masculino
                                 {!! Form::radio('sexo', 'Feminino', false, ['class', 'form-control']); !!}Feminino
-                                @if ($errors->has('email'))
+                                @if ($errors->has('sexo'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('sexo') }}</strong>
                                     </span>
@@ -69,8 +83,14 @@
                             <label for="renda_familiar" class="col-md-4 control-label">Renda Familiar</label>
 
                             <div class="col-md-6">
-                                {!! Form::number('renda_familiar', 0, ['class' => 'form-control', ]) !!}
-                                @if ($errors->has('password'))
+                                {!! Form::select('faixa_etaria', ['Não informada' => 'Não informada',
+                                                'De 0 a 1 salário minimo' => 'De 0 a 1 salário minimo',
+                                                '2 salários mínimos' => '2 salários mínimos',
+                                                '3 salários mínimos' => '3 salários mínimos',
+                                                '4 salários mínimos' => '4 salários mínimos',
+                                                '5 salários mínimos' => '5 salários mínimos',
+                                                '6 salários mínimos ou mais' => '6 salários mínimos ou mais',], null, ['class' => 'form-control',]) !!}
+                                @if ($errors->has('renda_familiar'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
@@ -312,6 +332,7 @@
         </div>
     </div>
     </form>
+    </div>
 </div>
 <footer>
 <div class="container">

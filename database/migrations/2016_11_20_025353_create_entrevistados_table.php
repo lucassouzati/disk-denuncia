@@ -16,14 +16,20 @@ class CreateEntrevistadosTable extends Migration
         Schema::create('entrevistados', function(Blueprint $table) {
             $table->increments('id');
             $table->enum('faixa_etaria', ['Não informada',
-                                        'De 10 a 20 anos',
-                                        'De 21 a 30 anos',
+                                        'De 8 a 12 anos',
+                                        'De 13 a 17 anos',
+                                        'De 18 a 30 anos',
                                         'De 31 a 40 anos',
                                         'De 41 a 50 anos',
                                         'De 51 a 60 anos',
-                                        'Mais de 60 anos'])->nullable();
-            $table->enum('sexo', ['Masculino', 'Feminino'])->nullable();
-            $table->float('renda_familiar')->nullable();
+                                        'Mais de 61 anos'])->nullable();
+            $table->enum('renda_familiar', ['Não informada',
+                                        'De 0 a 1 salário minimo',
+                                        '2 salários mínimos',
+                                        '3 salários mínimos',
+                                        '4 salários mínimos',
+                                        '5 salários mínimos',
+                                        '6 salários mínimos ou mais',])->nullable();;
             $table->enum('raca', ['Não Informada',
                                   'Branca',
                                   'Preta',
