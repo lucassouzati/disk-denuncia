@@ -49,13 +49,14 @@
                             <label for="name" class="col-md-4 control-label">Faixa Etária</label>
                             <div class="col-md-6">
 
-                                {!! Form::select('faixa_etaria', ['Não Informada' => '',
-                                                                'De 10 a 20 anos' =>'De 10 a 20 anos',
-                                                                'De 21 a 30 anos' => 'De 21 a 30 anos',
+                                {!! Form::select('faixa_etaria', ['Não informada' => 'Não informada',
+                                                                'De 8 a 12 anos' => 'De 8 a 12 anos',
+                                                                'De 13 a 17 anos' => 'De 13 a 17 anos',
+                                                                'De 18 a 30 anos' => 'De 18 a 30 anos',
                                                                 'De 31 a 40 anos' => 'De 31 a 40 anos',
                                                                 'De 41 a 50 anos' => 'De 41 a 50 anos',
                                                                 'De 51 a 60 anos' => 'De 51 a 60 anos',
-                                                                'Mais de 60 anos' => 'Mais de 60 anos'], null, ['class' => 'form-control',]) !!}
+                                                                'Mais de 61 anos' => 'Mais de 61 anos'], null, ['class' => 'form-control',]) !!}
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -83,7 +84,7 @@
                             <label for="renda_familiar" class="col-md-4 control-label">Renda Familiar</label>
 
                             <div class="col-md-6">
-                                {!! Form::select('faixa_etaria', ['Não informada' => 'Não informada',
+                                {!! Form::select('renda_familiar', ['Não informada' => 'Não informada',
                                                 'De 0 a 1 salário minimo' => 'De 0 a 1 salário minimo',
                                                 '2 salários mínimos' => '2 salários mínimos',
                                                 '3 salários mínimos' => '3 salários mínimos',

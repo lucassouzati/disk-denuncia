@@ -36,6 +36,7 @@ class CreateEntrevistadosTable extends Migration
                                   'Amarela',
                                   'Parda',
                                   'Indígena'])->nullable();
+            $table->enum('sexo', ['Masculino', 'Feminino']);
             $table->integer('cidade_id')->nullable();
             $table->boolean('conhece_disk_denuncia')->nullable();
             $table->text('consideracao')->nullable();
