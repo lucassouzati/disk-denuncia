@@ -20,6 +20,7 @@
      width: 25%;
 
    }
+   /*
    .jumbotron {
     position: relative;
     background: rgba(236,238,239, 0.6) url("/imagens/logoAC-tp.png") no-repeat center center;
@@ -27,12 +28,12 @@
     height: 100%;
     background-size: 240px 180px;
     overflow: hidden;
-    }   
+    }*/   
 
 </style>
 <div class="container">
     <div class="jumbotron">
-        <h2>Avaliação dos Serviços de Segurança Pública na Percepção da Comunidade</h2>
+        <h2>Avaliação da Segurança Pública pela Comunidade do Noroeste Fluminense</h2>
         <p>Este formulário tem o objetivo de dialogar com a comunidade sobre segurança pública. Suas respostas são de grande importância para nos ajudar a ofertar serviços melhores à população. Ajudem-nos!</p>
     </div>
 <div class="row">
@@ -149,7 +150,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h2>Dimensões</h2>
+            <h2><b>Qual é o seu grau de satisfação em relação aos seguintes pontos:</b></h2>
             <p>Informe uma nota de 1 a 5. Na escala, quanto menor o número atribuído, menor é sua satisfação em relação ao item que está sendo avaliado. Caso, não saiba responder, marque o item "Não sei responder".</p>
         </div>
     </div>
@@ -158,7 +159,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Presteza</div>
+                <div class="panel-heading"><h4><b>Combate à criminalidade</b></h4></div>
                 <div class="panel-body">
                     @forelse(\App\Pergunta::daDimensao(1)->get() as $pergunta)
                         <div class="col-md-12 border rcorners2">
@@ -189,7 +190,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dimensão 2</div>
+                <div class="panel-heading"><h4><b>Presença nas ruas</b></h4></div>
                 <div class="panel-body">
                     @forelse(\App\Pergunta::daDimensao(2)->get() as $pergunta)
                         <div class="col-md-12 rcorners2 ">
@@ -220,7 +221,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dimensão 3</div>
+                <div class="panel-heading"><h4><b>Efetividade das ações policiais</b></h4></div>
                 <div class="panel-body">
                     @forelse(\App\Pergunta::daDimensao(3)->get() as $pergunta)
                         <div class="col-md-12 rcorners2 ">
@@ -252,7 +253,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dimensão 4</div>
+                <div class="panel-heading"><h4><b>Educação no atendimento</b></h4></div>
                 <div class="panel-body">
                     @forelse(\App\Pergunta::daDimensao(4)->get() as $pergunta)
                         <div class="col-md-12 rcorners2 ">
@@ -283,7 +284,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dimensão 5</div>
+                <div class="panel-heading"><h4><b>Condições de trabalho e infraestrutura</b></h4></div>
                 <div class="panel-body">
                     @forelse(\App\Pergunta::daDimensao(5)->get() as $pergunta)
                         <div class="col-md-12 rcorners2 ">
@@ -313,7 +314,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Consideração Finais</div>
+                <div class="panel-heading"><h4><b>Considerações Finais</b></h4></div>
                 <div class="panel-body">
                         <div class="col-md-12">
                             <div class="col-md-12">
@@ -344,19 +345,28 @@
 </div>
 <footer>
 <div class="col-md-12">
-    <h5>Organização:</h5>
+
+    
     <div>
-        <div class="col-md-4 col-sm-12">
+        <h5>Evento:</h5>
+        <div class="col-md-3 col-sm-12">
+            <img class="img-responsive" src="/imagens/logoAC.png" alt="alt">
+        </div>
+    </div>
+    
+    <div>
+        <h5>Organização:</h5>    
+        <div class="col-md-3 col-sm-12">
             <img class="img-responsive" src="/imagens/logoAminature.jpg" alt="alt">
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
             <img class="img-responsive" src="/imagens/logonovoddn.jpg" alt="alt">
         </div>
     </div>
     
     <div>
         <h5>Apoio:</h5>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-3 col-sm-12">
             <img class="img-responsive" src="/imagens/IFF.jpg" alt="alt">
         </div>
     </div>
