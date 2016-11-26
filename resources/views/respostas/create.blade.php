@@ -41,7 +41,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Perfil do Avaliador</div>
+                <div class="panel-heading"><h4><b>Perfil do Avaliador</b></h4></div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('entrevistados.store') }}">
                         {{ csrf_field() }}
@@ -166,15 +166,14 @@
                             <div class="col-md-12 ">
                                 <label for="conhece_disk_denuncia" class="col-md-12 control-label">{{$pergunta->descricao}}</label>
                             </div>
-
-                            <div class="col-md-10 col-md-offset-1">
-                                Pouco Satisfeito -
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5
-                                 - Muito Satisfeito -
+                            <div class="col-md-12 col-md-offset-1">
+                                Pouco Satisfeito
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5 
+                                 Muito Satisfeito &nbsp &nbsp &nbsp &nbsp &nbsp
                                 {!! Form::radio('pergunta['.$pergunta->id.']', '0', false, ['class', 'form-control']); !!}Não sei responder
                             </div>
                         </div>
@@ -198,14 +197,14 @@
                                 <label for="conhece_disk_denuncia" class="col-md-12 control-label">{{$pergunta->descricao}}</label>
                             </div>
 
-                            <div class="col-md-10 col-md-offset-1">
-                                Pouco Satisfeito -
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5
-                                 - Muito Satisfeito -
+                            <div class="col-md-12 col-md-offset-1">
+                                Pouco Satisfeito
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5 
+                                 Muito Satisfeito &nbsp &nbsp &nbsp &nbsp &nbsp
                                 {!! Form::radio('pergunta['.$pergunta->id.']', '0', false, ['class', 'form-control']); !!}Não sei responder
                             </div>
                         </div>
@@ -229,14 +228,14 @@
                                 <label for="conhece_disk_denuncia" class="col-md-12 control-label">{{$pergunta->descricao}}</label>
                             </div>
 
-                            <div class="col-md-10 col-md-offset-1">
-                                Pouco Satisfeito -
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5
-                                 - Muito Satisfeito -
+                            <div class="col-md-12 col-md-offset-1">
+                                Pouco Satisfeito
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5 
+                                 Muito Satisfeito &nbsp &nbsp &nbsp &nbsp &nbsp
                                 {!! Form::radio('pergunta['.$pergunta->id.']', '0', false, ['class', 'form-control']); !!}Não sei responder
                             </div>
                         </div>
@@ -261,14 +260,14 @@
                                 <label for="conhece_disk_denuncia" class="col-md-12 control-label">{{$pergunta->descricao}}</label>
                             </div>
 
-                            <div class="col-md-10 col-md-offset-1">
-                                Pouco Satisfeito -
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5
-                                 - Muito Satisfeito -
+                            <div class="col-md-12 col-md-offset-1">
+                                Pouco Satisfeito
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5 
+                                 Muito Satisfeito &nbsp &nbsp &nbsp &nbsp &nbsp
                                 {!! Form::radio('pergunta['.$pergunta->id.']', '0', false, ['class', 'form-control']); !!}Não sei responder
                             </div>
                         </div>
@@ -292,14 +291,14 @@
                                 <label for="conhece_disk_denuncia" class="col-md-12 control-label">{{$pergunta->descricao}}</label>
                             </div>
 
-                            <div class="col-md-10 col-md-offset-1">
-                                Pouco Satisfeito -
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4
-                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5
-                                 - Muito Satisfeito -
+                            <div class="col-md-12 col-md-offset-1">
+                                Pouco Satisfeito
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '1', false, ['class', 'form-control', 'required']); !!}1 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '2', false, ['class', 'form-control']); !!}2 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '3', false, ['class', 'form-control']); !!}3 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '4', false, ['class', 'form-control']); !!}4 &nbsp &nbsp
+                                {!! Form::radio('pergunta['.$pergunta->id.']', '5', false, ['class', 'form-control']); !!}5 
+                                 Muito Satisfeito &nbsp &nbsp &nbsp &nbsp &nbsp
                                 {!! Form::radio('pergunta['.$pergunta->id.']', '0', false, ['class', 'form-control']); !!}Não sei responder
                             </div>
                         </div>
